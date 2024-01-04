@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <main>
+            
+                <form class="box">
+                    <input type="text" name="search" placeholder="Location...">
+                    <input type="submit" name="" value="Search">
+                </form>
+    
+            <div class="weather-main">
+            <div class="weather-item" onclick="getWeather()">
+                <img src="./assets/sunny.png" alt="Sunny Weather Image">
+            </div>
+            <div class="weatherData">
+                <h1 id="weatherTemp"></h1>
+                <p id="cityArea"></p>
+                <div class="extraDetails">
+                    <div style="display: flex; gap: 10px;">
+                        <img src="./assets/humidityLogo.png" id="humidityLogo">
+                        <div  class="detailsLayout">
+                            <p id="humidity"></p>
+                            <p style="font-weight: 400; font-size: 15px;">Humidity</p>
+                           
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <img src="./assets/windLogo.png" id="humidityLogo">
+                        <div  class="detailsLayout">
+                            <p id="wind"></p>
+                            <p style="font-weight: 400; font-size: 15px;">Wind </p>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div id="additionalInfo" >
+                    <div style="display: flex; ">
+                        <img src="./assets/sunrise.png" id="sunriseLogo" >
+                        <div class="detailsLayout">
+                            <p id="sunrise"></p>
+                            <p style="font-weight: 400; font-size: 15px;">Sunrise</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <img src="./assets/sunset.png" id="sunsetLogo">
+                        <div class="detailsLayout">
+                            <p id="sunset"></p>
+                            <p style="font-weight: 400; font-size: 15px;">Sunset</p>
+                        </div>
+                    </div>
+                </div>
+                <p id="showMore" onclick="toggleAdditionalInfo()">Show More <i class="fa fa-arrow-down" style="font-size: 12px;"></i></p>
+                <p id="showLess" style="display: none;" onclick="toggleAdditionalInfo()">Show Less <i class="fa fa-arrow-up" style="font-size: 12px;"></i></p>
+            
+            </div>
+        </div>
+        </main>
+    
+    <script src="weather.js"></script>
+</body>
+</html>
